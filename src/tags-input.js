@@ -332,7 +332,10 @@ tagsInput.directive('tagsInput', function($timeout, $document, $window, tagsInpu
                         if (scope.disabled) {
                             return;
                         }
-                        input[0].focus();
+
+                        $timeout(function(){
+                          input[0].focus();
+                        });
                     }
                 },
                 tag: {
